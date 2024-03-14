@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>Página do Pokémon Squirtle</title>
-    <script>
- 
-    </script>
     <style>
       /* Reset de estilos para garantir consistência em diferentes navegadores */
       body,
@@ -23,6 +20,14 @@
         padding: 0;
       }
 
+      /* Estilos gerais */
+
+      body {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        background-color: #f4f4f4;
+      }
+
       main {
         max-width: 80vw;
         margin: 0 auto;
@@ -32,30 +37,14 @@
         padding: 20px;
       }
 
-      p {
-        margin-bottom: 16px;
-      }
-
-      ul li {
-        margin-left: 20px;
-      }
-
-      body {
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f4f4f4;
-      }
-
-      header {
-        background-color: #007bff;
-        color: #fff;
-        text-align: center;
+      main section,
+      main article {
+        color: black;
+        background-color: #fff;
         padding: 20px;
-      }
-
-      header h1 {
-        font-size: 24px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
       }
 
       section h1,
@@ -70,46 +59,66 @@
         margin-bottom: 10px;
       }
 
-      #recursos ul li a {
-        color: #4592c4;
-        text-decoration: underline;
-        font-weight: bold;
+      p {
+        margin-bottom: 16px;
       }
+
+      ul li {
+        list-style-position: inside;
+      }
+
+      /* Header */
+
+      header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      /* Lista de navegação */
 
       nav ul {
         list-style: none;
         display: flex;
+        gap: 20px;
         justify-content: center;
         background-color: #343a40;
         padding: 10px;
-        border-radius: 5px;
-        margin: 0 0 20px 0;
+        margin-bottom: 20px;
       }
 
       nav a {
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        margin: 0 15px;
       }
 
-      th {
-        padding: 10px 24px;
+      nav a:hover {
+        color: #ffc107;
       }
 
-      tr {
+      /* Seções */
+
+      #curiosidades li::marker {
+        content: '🔍';
+      }
+
+      #evolucao ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+      }
+
+      #evolucao figcaption {
+        font-weight: 600;
+        font-size: 20px;
         text-align: center;
-      }
-
-      main section,
-      main article,
-      main table {
-        color: black;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        margin-top: 16px;
       }
 
       article {
@@ -117,30 +126,18 @@
         color: #fff;
       }
 
-      #curiosidades ul li::before {
-        content: '🔍';
-      }
+      /* Links */
 
-      #curiosidades ul {
-        text-indent: -1rem;
-      }
-
-      #curiosidades ul {
-        padding-left: 0;
-        list-style-type: none;
-      }
-
-      #evolucao ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-      }
-
-      #evolucao ul li p {
-        text-align: center;
+      a[target='_blank'] {
+        color: #4592c4;
         font-weight: bold;
-        font-size: 18px;
       }
+
+      a[target='_blank']:hover {
+        opacity: 0.8;
+      }
+
+      /* Footer */
 
       footer {
         background-color: #343a40;
@@ -148,37 +145,32 @@
         padding: 20px;
         text-align: center;
         bottom: 0;
-        width: 100%;
       }
 
       footer a {
         text-decoration: none;
+        transition: color 0.3s ease-in-out;
       }
 
-      footer a:hover {
-        opacity: 0.8;
-      }
-
-      nav a:hover {
-        color: #ffc107;
-        opacity: 0.8;
-      }
-
-      #voltar-ao-topo a {
+      footer a[href*='#'] {
         color: white;
       }
 
-      #contato a {
+      footer a[href*='mailto'] {
         color: orangered;
       }
 
-      #telefone a {
+      footer a[href*='tel'] {
         color: limegreen;
+      }
+
+      footer a[href]:hover {
+        opacity: 0.8;
       }
     </style>
   </head>
   <body>
-    <header>
+    <header id="header">
       <h1>Squirtle</h1>
     </header>
 
@@ -213,9 +205,7 @@
           adicional. Ele possui ataques de água poderosos, como Water Gun e
           Hydro Pump.
         </p>
-        <h3 id="jose"></h3>
       </section>
-
 
       <section id="curiosidades" aria-labelledby="curiosidades-label">
         <h2 id="curiosidades-label">Curiosidades</h2>
@@ -280,47 +270,33 @@
         <h2 id="evolucao-label">Evoluções</h2>
         <ul>
           <li>
-            <div>
-              <a
-                href="https://bulbapedia.bulbagarden.net/wiki/Squirtle_(Pok%C3%A9mon)"
-                ,
-                target="_blank"
-              >
-                <img
-                  src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
-                  alt="Squirtle"
-                />
-              </a>
-              <p>1. Squirtle</p>
-            </div>
+            <figure>
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
+                alt="Squirtle"
+              />
+              <figcaption>1. Squirtle</figcaption>
+            </figure>
           </li>
+
           <li>
-            <div>
-              <a
-                href="https://bulbapedia.bulbagarden.net/wiki/Wartortle_(Pok%C3%A9mon)"
-                target="_blank"
-              >
-                <img
-                  src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png"
-                  alt="Wartortle"
-                />
-              </a>
-              <p>2. Wartortle</p>
-            </div>
+            <figure>
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png"
+                alt="Wartortle"
+              />
+              <figcaption>2. Wartortle</figcaption>
+            </figure>
           </li>
+
           <li>
-            <div>
-              <a
-                href="https://bulbapedia.bulbagarden.net/wiki/Blastoise_(Pok%C3%A9mon)"
-                target="_blank"
-              >
-                <img
-                  src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png"
-                  alt="Blastoise"
-                />
-              </a>
-              <p>2. Blastoise</p>
-            </div>
+            <figure>
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png"
+                alt="Blastoise"
+              />
+              <figcaption>3. Blastoise</figcaption>
+            </figure>
           </li>
         </ul>
       </section>
@@ -330,13 +306,9 @@
       <p aria-label="Copyright">
         &copy; 2024 Página do Pokémon Squirtle. Todos os direitos reservados.
       </p>
-      <p id="voltar-ao-topo"><a href="#info-squirtle">Voltar para o topo</a></p>
-      <p id="contato">
-        <a href="mailto:contato@squirtlepage.com">Contato via e-mail</a>
-      </p>
-      <p id="telefone">
-        <a href="tel:+5555555555">Telefone: (55) 5555-5555</a>
-      </p>
+      <p><a href="#header">Voltar para o topo</a></p>
+      <p><a href="mailto:contato@squirtlepage.com">Contato via e-mail</a></p>
+      <p><a href="tel:+5555555555">Telefone: (55) 5555-5555</a></p>
     </footer>
   </body>
 </html>
