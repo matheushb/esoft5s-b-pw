@@ -1,0 +1,54 @@
+body,
+h1,
+h2,
+p,
+ul,
+ol,
+li,
+figure,
+table,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  background-color: #f4f4f4;
+}
+
+#task-input {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100vw;
+}
+
+#input {
+  padding: 0.5rem;
+}
+
+#button {
+  padding: 0.5rem;
+  background-color: #0074d9;
+  border-color: #0074d9;
+  color: #f4f4f4;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  grid-row: 3;
+}
