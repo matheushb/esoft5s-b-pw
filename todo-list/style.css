@@ -40,10 +40,6 @@ footer {
   flex-direction: column;
 }
 
-#form input {
-  padding: 8px;
-}
-
 #form button {
   background-color: #0074d9;
   border: none;
@@ -57,13 +53,42 @@ footer {
   background-color: #1793ff;
 }
 
-#task-list {
-  display: flex;
-  flex-direction: column;
-  list-style: decimal;
-  margin-left: 2rem;
+#task-title {
+  width: 12rem;
+  padding: 0.5rem;
+  font-size: 16px;
+}
+
+#task-description {
+  resize: vertical;
+  padding: 0.5rem;
+  width: 12rem;
+  font-size: 16px;
 }
 
 #task-list li {
   text-align: left;
+}
+
+#task-list {
+  padding: 1rem;
+  list-style: none;
+}
+
+#task-list li {
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+#task-list h3 {
+  padding: 1rem;
+}
+
+#task-list p {
+  padding: 1rem;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  margin: 1rem 0 0 0;
 }

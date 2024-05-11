@@ -11,15 +11,20 @@
       <h1>Todo List</h1>
     </header>
     <main>
-      <div id="form">
+      <form id="form">
         <input
           type="text"
-          placeholder="Digite uma tarefa..."
-          name="Insira task aqui"
-          id="task-input"
+          name="task-title"
+          id="task-title"
+          placeholder="Título da tarefa"
         />
-        <button id="envio-task" onclick="addTask()">Adicionar Tarefa</button>
-      </div>
+        <textarea
+          name="task-description"
+          id="task-description"
+          placeholder="Descrição da tarefa"
+        ></textarea>
+        <button type="submit">Salvar Tarefa</button>
+      </form>
       <ul id="task-list"></ul>
     </main>
     <footer aria-label="Rodapé">
