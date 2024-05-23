@@ -54,7 +54,6 @@ main form {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 input,
 textarea {
   width: 100%;
@@ -70,18 +69,6 @@ textarea::placeholder {
 #save-task,
 #update-task,
 #cancel-update {
-=======
-#form {
-  padding: 1rem;
-  gap: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#form button {
->>>>>>> 5c5773cee36aae620a3aa2c04d078fb2c8adf665
   background-color: #0074d9;
   color: #fff;
   border: none;
@@ -96,23 +83,9 @@ ul {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 main ul li div {
   display: flex;
   justify-content: space-between;
-=======
-#task-title {
-  width: 12rem;
-  padding: 0.5rem;
-  font-size: 16px;
-}
-
-#task-description {
-  resize: vertical;
-  padding: 0.5rem;
-  width: 12rem;
-  font-size: 16px;
->>>>>>> 5c5773cee36aae620a3aa2c04d078fb2c8adf665
 }
 
 .open-modal {
@@ -132,27 +105,4 @@ li {
 li p {
   white-space: pre-wrap;
   margin-top: 10px;
-}
-
-#task-list {
-  padding: 1rem;
-  list-style: none;
-}
-
-#task-list li {
-  border: 1px solid #ddd;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-}
-
-#task-list h3 {
-  padding: 1rem;
-}
-
-#task-list p {
-  padding: 1rem;
-  white-space: pre-wrap;
-  font-size: 0.9rem;
-  margin: 1rem 0 0 0;
 }
