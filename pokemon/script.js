@@ -8,8 +8,6 @@
     `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
   ).then(response => response.json());
 
-  console.log(response);
-
   const sprites = Object.values(response.sprites).filter(
     el => typeof el == 'string'
   );
@@ -20,8 +18,6 @@
     x < sprites.length - 1 ? x++ : (x = 0);
     document.querySelector('#pokemon-img').src = sprites[x];
   });
-
-  console.log(x);
 
   document.querySelector(
     '#informacoes'
